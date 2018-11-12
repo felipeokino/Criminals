@@ -1,10 +1,10 @@
-package Model;
+package Criminals.Model;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class Proccess {
+public class Process {
     @Id
     @GeneratedValue
     private Long id;
@@ -15,9 +15,9 @@ public class Proccess {
     @ManyToMany
     private List<Crime> crimes;
 
-    public Proccess() {}
+    public Process() {}
 
-    public Proccess(Long id, Criminal criminal, List<Crime> crimes) {
+    public Process(Long id, Criminal criminal, List<Crime> crimes) {
         this.id = id;
         this.criminal = criminal;
         this.crimes = crimes;
@@ -35,7 +35,7 @@ public class Proccess {
         return criminal;
     }
 
-    public void setCriminal(Criminal criminal) {
+    public void setCriminal(String criminal) {
         this.criminal = criminal;
     }
 
@@ -49,7 +49,7 @@ public class Proccess {
 
     @Override
     public String toString() {
-        return "Proccess{" +
+        return "Process{" +
                 "id=" + id +
                 ", crimes=" + crimes +
                 '}';
