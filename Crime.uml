@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Model.Crime</OriginalElement>
+  <nodes>
+    <node x="47.70099206349208" y="0.0">javax.persistence.Entity</node>
+    <node x="157.0" y="316.0">Model.Proccess</node>
+    <node x="0.0" y="316.0">Model.Neighborhood</node>
+    <node x="77.05337301587304" y="237.0">Model.Crime</node>
+    <node x="116.12083333333335" y="79.0">Model.Criminal</node>
+    <node x="57.320436507936506" y="158.0">Model.Gang</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Model.Crime" target="javax.persistence.Entity">
+      <point x="-33.2" y="-14.5" />
+      <point x="85.35337301587303" y="217.0" />
+      <point x="46.82043650793652" y="217.0" />
+      <point x="46.82043650793652" y="59.0" />
+      <point x="72.90099206349207" y="59.0" />
+      <point x="-16.80000000000001" y="14.5" />
+    </edge>
+    <edge source="Model.Proccess" target="Model.Criminal">
+      <point x="0.0" y="-14.5" />
+      <point x="209.0" y="296.0" />
+      <point x="218.64087301587304" y="296.0" />
+      <point x="218.64087301587304" y="138.0" />
+      <point x="188.87083333333334" y="138.0" />
+      <point x="24.250000000000004" y="14.5" />
+    </edge>
+    <edge source="Model.Neighborhood" target="javax.persistence.Entity">
+      <point x="-45.66666666666666" y="-14.5" />
+      <point x="22.833333333333343" y="296.0" />
+      <point x="25.55833333333335" y="296.0" />
+      <point x="25.55833333333335" y="49.0" />
+      <point x="56.10099206349207" y="49.0" />
+      <point x="-33.60000000000001" y="14.5" />
+    </edge>
+    <edge source="Model.Proccess" target="Model.Crime">
+      <point x="-41.599999999999966" y="-14.5" />
+      <point x="167.40000000000003" y="296.0" />
+      <point x="128.92837301587304" y="296.0" />
+      <point x="10.375" y="14.5" />
+    </edge>
+    <edge source="Model.Gang" target="javax.persistence.Entity">
+      <point x="-27.0" y="-14.5" />
+      <point x="70.8204365079365" y="138.0" />
+      <point x="89.70099206349208" y="138.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Model.Proccess" target="javax.persistence.Entity">
+      <point x="41.599999999999994" y="-14.5" />
+      <point x="251.06210317460318" y="49.0" />
+      <point x="123.30099206349207" y="49.0" />
+      <point x="33.599999999999994" y="14.5" />
+    </edge>
+    <edge source="Model.Neighborhood" target="Model.Crime">
+      <point x="0.0" y="-14.5" />
+      <point x="68.5" y="296.0" />
+      <point x="87.42837301587304" y="296.0" />
+      <point x="-31.125" y="14.5" />
+    </edge>
+    <edge source="Model.Gang" target="Model.Criminal">
+      <point x="27.0" y="-14.5" />
+      <point x="124.8204365079365" y="138.0" />
+      <point x="140.37083333333334" y="138.0" />
+      <point x="-24.25" y="14.5" />
+    </edge>
+    <edge source="Model.Crime" target="Model.Criminal">
+      <point x="33.20000000000002" y="-14.5" />
+      <point x="151.75337301587305" y="217.0" />
+      <point x="178.4982142857143" y="217.0" />
+      <point x="178.4982142857143" y="138.0" />
+      <point x="172.70416666666665" y="138.0" />
+      <point x="8.083333333333314" y="14.5" />
+    </edge>
+    <edge source="Model.Criminal" target="javax.persistence.Entity">
+      <point x="0.0" y="-14.5" />
+      <point x="164.62083333333334" y="59.0" />
+      <point x="106.50099206349206" y="59.0" />
+      <point x="16.799999999999983" y="14.5" />
+    </edge>
+    <edge source="Model.Crime" target="Model.Gang">
+      <point x="0.0" y="-14.5" />
+      <point x="20.25" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.412196596952238" x="330.5" y="528.5" />
+  <SelectedNodes>
+    <node>Model.Crime</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
