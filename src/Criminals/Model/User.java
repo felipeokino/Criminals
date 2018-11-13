@@ -19,11 +19,19 @@ public class User {
 
     private String office;
 
+    private String login;
+
+    private String password;
+
+
     public User(String name, String cpf, Date birth, String office) {
         this.name = name;
         this.cpf = cpf;
         this.birth = birth;
         this.office = office;
+        this.login = login;
+        this.password = password;
+
     }
 
     public User() {
@@ -65,7 +73,15 @@ public class User {
         return office;
     }
 
-    public void setOffice(String office) {
-        this.office = office;
+    public void setOffice(String office) { this.office = office; }
+
+    public String getLogin() { return login; }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
+
+    public String getPassword (){ return password; }
+
+    public void setPassword(String password) { this.password = password; }
 }

@@ -8,6 +8,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO {
+
+    public boolean verifica(User user){
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try{
+            conn = ConnectionFactory.getConnection();
+            String sql = "SELECT * FROM USUARIO WHERE LOGIN =? AND SENHA=?";
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, user.getLogin());
+            ps.setString(2, user.getPassword());
+            rs = ps.executeQuery();
+            if(rs.next()) {
+                return true;
+            }
+            return false;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }finally {
+            ConnectionFactory.close(conn);
+        }
+
+    }
+
     public void inserir(User user) {
         Connection conn = null;
         PreparedStatement ps = null;
@@ -37,7 +62,7 @@ public class UserDAO {
         }
     }
 
-    public List<User> getProdutos() {
+    public List<User> getUser() {
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
