@@ -1,12 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Registro Usuario</title>
-    <meta charset="UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <%--<meta http-equiv="refresh" content="0"/>--%>
+  <meta charset="UTF-8"/>
+  <title>Cadastro de Usuário</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body background="images.jpg" style="color: white">
+<body>
+<div class="central">
+  <h1>Cadastro de Usuário</h1>
   <form id="register_form">
     <div class="form_child">
       <label>CPF</label>
@@ -28,5 +29,8 @@
   </form>
   <input type="submit" name="enviar" value="Cadastrar">
   <a href="adminMain.jsp"><button>Voltar</button></a>
-  </body>
+
+</div>
+</body>
 </html>
+
