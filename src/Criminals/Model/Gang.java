@@ -6,7 +6,7 @@ import java.util.List;
 @Entity
 public class Gang {
     @Id
-    @Temporal(TemporalType.DATE)
+    @GeneratedValue
     private long id;
 
     private String name;

@@ -1,6 +1,7 @@
 package Criminals.Model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class Criminal {
@@ -13,9 +14,9 @@ public class Criminal {
     private String last_name;
 
     @Temporal(TemporalType.DATE)
-    private String birth_date;
+    private Date birth_date;
 
-    public Criminal(long id, String cpf, String first_name, String last_name, String birth_date) {
+    public Criminal(long id, String cpf, String first_name, String last_name, Date birth_date) {
         this.id = id;
         this.cpf = cpf;
         this.first_name = first_name;
@@ -58,11 +59,11 @@ public class Criminal {
         this.last_name = last_name;
     }
 
-    public String getBirth_date() {
+    public Date getBirth_date() {
         return birth_date;
     }
 
-    public void setBirth_date(String birth_date) {
+    public void setBirth_date(Date birth_date) {
         this.birth_date = birth_date;
     }
 

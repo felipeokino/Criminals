@@ -26,7 +26,7 @@ public class CriminalDAO {
             ps.setString(2, criminal.getCpf());
             ps.setString(3, criminal.getFirst_name());
             ps.setString(4, criminal.getLast_name());
-            ps.setString(5, criminal.getBirth_date());
+            ps.setDate(5, (Date) criminal.getBirth_date());
             ps.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);

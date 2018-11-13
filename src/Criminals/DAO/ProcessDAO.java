@@ -50,7 +50,6 @@ public class ProcessDAO {
                 Process process = new Process();
                 process.setId((long) rs.getInt(1));
                 process.setCrimes((List<Crime>) rs.getArray(2));
-                process.setCriminal(rs.getString(3));
                 processes.add(process);
             }
             return processes;

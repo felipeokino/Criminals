@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO {
-    public void inserir(User user) {
+    public void insert(User user) {
         Connection conn = null;
         PreparedStatement ps = null;
 
