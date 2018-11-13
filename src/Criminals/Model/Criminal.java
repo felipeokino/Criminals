@@ -76,6 +76,4 @@ public class Criminal {
                 ", birth_date='" + birth_date + '\'' +
                 '}';
     }
-
-    // testeeee
 }

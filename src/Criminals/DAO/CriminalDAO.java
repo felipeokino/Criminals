@@ -14,7 +14,7 @@ public class CriminalDAO {
 
         if(criminal == null)
             throw new
-                    RuntimeException("O produto não pode" +
+                    RuntimeException("O criminoso não pode" +
                     " ser nulo!");
         try {
             conn = ConnectionFactory.getConnection();

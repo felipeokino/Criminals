@@ -34,7 +34,7 @@ public class GangDAO {
         }
     }
 
-    public List<Gang> getProdutos() {
+    public List<Gang> getGang() {
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
