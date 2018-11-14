@@ -9,7 +9,7 @@ import javax.servlet.http.HttpSession;
 import javax.persistence.EntityManager;
 
 
-public class Logar implements Comando{
+public class Logar {
 
        @Override
        public String execute(HttpServletRequest req, HttpServletResponse resp) throws Exception {

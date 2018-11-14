@@ -19,7 +19,7 @@ public class CrimeDAO {
         try {
             conn = ConnectionFactory.getConnection();
             String sql = "INSERT INTO Crime " +
-                    "(ID, DESCRIPTION, DATE) " +
+                    "(id, description, date) " +
                     "VALUES (?, ?, ?)";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, Math.toIntExact(crime.getId()));

@@ -19,8 +19,8 @@ public class GangDAO {
                     " ser nulo!");
         try {
             conn = ConnectionFactory.getConnection();
-            String sql = "INSERT INTO GANG " +
-                    "(ID, NAME, CRIMINALS) " +
+            String sql = "INSERT INTO gang " +
+                    "(id, name, criminals) " +
                     "VALUES (?, ?, ?)";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, Math.toIntExact(gang.getId()));

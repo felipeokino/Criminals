@@ -17,8 +17,8 @@ public class NeighborhoodDAO {
                     " ser nulo!");
         try {
             conn = ConnectionFactory.getConnection();
-            String sql = "INSERT INTO NEIGHBORHOOD " +
-                    "(ID, NAME, CITY) " +
+            String sql = "INSERT INTO neighborhood " +
+                    "(id, name, city) " +
                     "VALUES (?, ?, ?, ?)";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, Math.toIntExact(neigh.getId()));

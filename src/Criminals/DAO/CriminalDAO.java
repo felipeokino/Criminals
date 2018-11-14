@@ -18,8 +18,8 @@ public class CriminalDAO {
                     " ser nulo!");
         try {
             conn = ConnectionFactory.getConnection();
-            String sql = "INSERT INTO CRIMINAL " +
-                    "(ID, CPF, FIRSTNAME, LASTNAME, BIRTH) " +
+            String sql = "INSERT INTO criminal " +
+                    "(id, cpf, firstname, lastname, birth) " +
                     "VALUES (?, ?, ?, ?, ?)";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, Math.toIntExact(criminal.getId()));

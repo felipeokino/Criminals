@@ -19,8 +19,8 @@ public class ProcessDAO {
                     " ser nulo!");
         try {
             conn = ConnectionFactory.getConnection();
-            String sql = "INSERT INTO PROCESS " +
-                    "(ID, CRIMES, CRIMINALS) " +
+            String sql = "INSERT INTO process " +
+                    "(id, crimes, criminals) " +
                     "VALUES (?, ?, ?)";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, Math.toIntExact(process.getId()));
