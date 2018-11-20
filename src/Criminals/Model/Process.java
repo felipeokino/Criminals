@@ -35,7 +35,7 @@ public class Process {
         return criminal;
     }
 
-    public void setCriminal(String criminal) {
+    public void setCriminal(Criminal criminal) {
         this.criminal = criminal;
     }
 
