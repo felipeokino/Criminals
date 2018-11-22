@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <title>Cadastrar Bairro</title>
-  <link rel="stylesheet" type="text/css" href="../../../../WebstormProjects/EdiçãoTelasCriminal/Telas/style.css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
 <div class="central" id="centralBairro">
