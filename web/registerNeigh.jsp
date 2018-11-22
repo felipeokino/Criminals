@@ -1,29 +1,55 @@
-<%--
-  // tela inicial do admin
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>Registro Bairro</title>
   <meta charset="UTF-8"/>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <%--<meta http-equiv="refresh" content="0"/>--%>
+  <title>Cadastrar Bairro</title>
+  <link rel="stylesheet" type="text/css" href="../../../../WebstormProjects/EdiçãoTelasCriminal/Telas/style.css">
 </head>
-<body background="images.jpg" style="color: white">
-<fieldset class="principal">
-  <h2 >Novo Bairro</h2>
-  <form id="register_form">
-    <div class="form_child">
-      <label>Nome</label>
-      <input type="text" name="name">
+<body>
+<div class="central" id="centralBairro">
 
-      <label>Cidade</label>
-      <input type="text" name="city">
+  <h2 id="hSpecial">Novo Bairro</h2>
 
-      <input type="submit" name="enviar" value="Cadastrar">
-      <a href="adminMain.jsp"><button>Voltar</button></a>
-    </div>
-  </form>
-</fieldset>
+  <div class="dadoSpecial">
+    <form>
+
+      <label class="labelBairro">
+        Nome
+        <input type="text" name="nameCity">
+      </label>
+
+      <label class="labelBairro">
+        Cidade
+        <input type="text" name="city">
+      </label>
+
+      <div class="botoes">
+        <button type="submit" value="Enviar" class="btn">Cadastrar</button>
+        <a href="adminMain.jsp"><button class="btn">Voltar</button></a>
+      </div>
+
+    </form>
+  </div>
+
+</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

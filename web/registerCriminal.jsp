@@ -1,40 +1,51 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>Registro Criminoso</title>
   <meta charset="UTF-8"/>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <%--<meta http-equiv="refresh" content="0"/>--%>
+  <title>Cadastrar Criminoso</title>
+  <link rel="stylesheet" type="text/css" href="../../../../WebstormProjects/EdiçãoTelasCriminal/Telas/style.css">
 </head>
+<body>
+<div class="central">
 
-<body background="images.jpg" style="color: white">
-<fieldset class="principal">
-  <h2 >Novo Criminoso</h2>
-  <form id="register_form">
-    <div class="form_child">
-      <label>CPF</label>
-      <input type="text" name="cpf">
+  <h2>Novo Criminoso</h2>
+  <div class="dadoSpecial">
+    <form>
 
-      <label>Nome</label>
+      <label class="labelCriminoso">
+        CPF
+        <input type="text" name="cpf">
+      </label>
+
+      <label class="labelCriminoso">
+        Nome
       <input type="text" name="first_name">
+      </label>
 
-      <label>Sobrenome</label>
-      <input type="text" name="last_name">
+      <label class="labelCriminoso">
+        Sobrenome
+        <input type="text" name="last_name">
+      </label>
 
-      <label>Nascimento</label>
-      <input type="date" name="niver">
-    </div>
-    <div style="margin-top: 10%">
-      <div style="margin-bottom: 2%">
-        <label>Pertence a gangue?</label>
-        <input type="checkbox" name="VISUAL">
+      <label class="labelCriminoso">
+        Nascimento
+        <input class="inputDataNasc" type="date" name="niver">
+      </label>
+
+        <div>
+          <label>Pertence a gangue?</label>
+          <input type="checkbox" name="VISUAL">
+        </div>
+
+      <div class="botoes">
+        <button type="submit" value="Enviar" class="btn">Enviar</button>
+        <button type="reset" value="limpar" class="btn">Limpar</button>
       </div>
-    </div>
-    <div>
-      <input type="submit" name="enviar" value="Enviar">
-      <input type="reset" name="limpar" value="limpar">
-    </div>
-  </form>
-</fieldset>
+    </form>
+
+  </div>
+
+</div>
 </body>
 </html>
+
