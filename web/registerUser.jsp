@@ -6,29 +6,40 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class="central">
-  <h1>Cadastro de Usuário</h1>
-  <form id="register_form">
-    <div class="form_child">
-      <label>CPF</label>
-      <input type="text" name="cpf">
+<div class="central" id="centralCadastroUser">
 
-      <label>Nome</label>
-      <input type="text" name="first_name">
+  <h2 id="hSpecial">Cadastro de Usuário</h2>
+  <div class="dadoSpecial">
+    <form>
 
-      <label>Sobrenome</label>
-      <input type="text" name="last_name">
+      <label class="labelUser">
+        CPF
+        <input type="text" name="cpf">
+      </label>
 
-      <label>Nascimento</label>
-      <input type="date" name="niver">
-    </div>
-    <div>
-      <input type="submit" name="enviar" value="Enviar">
-      <input type="reset" name="limpar" value="limpar">
-    </div>
-  </form>
-  <input type="submit" name="enviar" value="Cadastrar">
-  <a href="adminMain.jsp"><button>Voltar</button></a>
+      <label class="labelUser">
+        Nome
+        <input type="text" name="first_name">
+      </label>
+
+      <label class="labelUser">
+        Sobrenome
+        <input type="text" name="last_name">
+      </label>
+
+      <label class="labelUser">
+        Nascimento
+        <input class="inputDataUser" type="date" name="niver">
+      </label>
+
+      <div>
+        <button type="submit" value="Enviar" class="btnCadastroUser">Cadastrar</button>
+        <button type="reset" value="limpar" class="btnCadastroUser">Limpar</button>
+        <a href="adminMain.jsp"><button class="btnCadastroUser">Voltar</button></a>
+      </div>
+    </form>
+
+  </div>
 
 </div>
 </body>

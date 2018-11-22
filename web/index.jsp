@@ -6,18 +6,20 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
 <div class="central">
   <h1>Login de Usuário</h1>
-  <div id="dados">
+  <div class="dados">
     <label>Usuário</label>
     <input type="text">
 
     <label>Senha</label>
     <input type="password">
   </div>
-  <div id="botoes">
-    <a href="registerNeigh.html"><button>Entrar</button></a>
-    <a href="index.jsp"><button>Cancelar</button></a>
+
+  <div class="botoes">
+    <a href=""><button class="btn">Entrar</button></a>
+    <a href="index.jsp"><button class="btn">Cancelar</button></a>
   </div>
 
 </div>

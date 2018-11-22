@@ -1,13 +1,32 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>Home</title>
-  </head>
-  <body background="images.jpg" style="display: grid; grid-auto-columns: auto auto; width: 50%; margin: auto;">
-  <a href="registerCriminal.jsp"><button>Cadastrar criminoso</button></a>
-  <a href="registerCrime.jsp"><button>Cadastrar Ocorrencia</button></a>
-  <a href="viewCriminals.jsp"><button>Lista de criminoso</button></a>
-  <a href="viewProcess.jsp"><button>Processos</button></a>
-  </body>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="../../../../WebstormProjects/EdiçãoTelasCriminal/Telas/style.css">
+</head>
+<body>
+<div class="central" id="centralSpecial">
+  <h1>System of Registration of Crimes</h1>
+  <div class="botoesUser">
+    <a href="registerCriminal.jsp"><button class="btnUser">Cadastrar Criminoso</button></a>
+    <a href="registerCrime.jsp"><button class="btnUser">Cadastrar Ocorrência</button></a>
+    <a href="viewCriminals.jsp"><button class="btnUser">Consultar Criminoso</button></a>
+    <a href="viewCrime.jsp"><button class="btnUser">Consultar Ocorrências</button></a>
+    <a href="viewProcess.jsp"><button class="btnUser">Consultar Processos</button></a>
+    <a href="index.jsp"><button class="btnUser">Logout</button></a>
+  </div>
+</div>
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
