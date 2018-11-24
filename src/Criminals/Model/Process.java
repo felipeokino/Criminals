@@ -9,7 +9,7 @@ public class Process {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @OneToMany
+    @ManyToOne
     private Criminal criminal;
 
     @ManyToMany

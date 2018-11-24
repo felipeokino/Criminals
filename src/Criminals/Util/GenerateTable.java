@@ -10,7 +10,5 @@ public class GenerateTable {
                 Persistence.createEntityManagerFactory("criminal");
 
         factory.close();
-
     }
-
 }
