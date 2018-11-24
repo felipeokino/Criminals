@@ -7,7 +7,7 @@ import java.util.Date;
 @Entity
 public class Crime {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
     private String description;

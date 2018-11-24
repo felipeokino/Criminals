@@ -3,7 +3,10 @@ package Criminals.DAO;
 import Criminals.Model.User;
 import Criminals.Util.ConnectionFactory;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,28 +40,21 @@ public class UserDAO {
         Connection conn = null;
         PreparedStatement ps = null;
 
-        if(user == null)
-            throw new
-                    RuntimeException("O usuario não pode" +
-                    " ser nulo!");
+        if (user == null)
+            throw new RuntimeException("O usuario nao pode ser nulo");
+
         try {
             conn = ConnectionFactory.getConnection();
-            String sql = "INSERT INTO USER " +
-                    "(ID, CPF, NAME, BIRTH, OFFICE) " +
-                    "VALUES (?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO USER " + "(ID, CPF, NAME, BIRTH, OFFICE) " + "VALUES (?,?, ?, ?, ?)";
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, Math.toIntExact(user.getId()));
+            ps.setInt(1, (int) user.getId());
             ps.setString(2, user.getCpf());
             ps.setString(3, user.getName());
-            ps.setDate(4, (Date) user.getBirth());
+            ps.setString(4, user.getBirth());
             ps.setString(5, user.getOffice());
-
-
             ps.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } finally {
-            ConnectionFactory.close(conn);
+            e.printStackTrace();
         }
     }
 
@@ -79,7 +75,7 @@ public class UserDAO {
                 user.setId(rs.getInt(1));
                 user.setCpf(rs.getString(2));
                 user.setName(rs.getString(3));
-                user.setBirth(rs.getDate(4));
+                user.setBirth(rs.getString(4));
                 user.setOffice(rs.getString(2));
                 users.add(user);
             }

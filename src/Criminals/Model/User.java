@@ -1,21 +1,19 @@
 package Criminals.Model;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
     private String name;
 
     private String cpf;
 
-    @Temporal(TemporalType.DATE)
-    private Date birth;
+    private String birth;
 
     private String office;
 
@@ -24,14 +22,13 @@ public class User {
     private String password;
 
 
-    public User(String name, String cpf, Date birth, String office) {
+    public User(String name, String cpf, String birth, String office) {
         this.name = name;
         this.cpf = cpf;
         this.birth = birth;
         this.office = office;
         this.login = login;
         this.password = password;
-
     }
 
     public User() {
@@ -61,11 +58,11 @@ public class User {
         this.cpf = cpf;
     }
 
-    public Date getBirth() {
+    public String getBirth() {
         return birth;
     }
 
-    public void setBirth(Date birth) {
+    public void setBirth(String birth) {
         this.birth = birth;
     }
 
