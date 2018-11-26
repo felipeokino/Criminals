@@ -1,7 +1,6 @@
 package Criminals.Model;
 
 import javax.persistence.*;
-import java.util.Date;
 
 
 @Entity
@@ -12,8 +11,7 @@ public class Crime {
 
     private String description;
 
-    @Temporal(TemporalType.DATE)
-    private Date date;
+    private String date;
 
     @ManyToOne
     private Gang gang;
@@ -21,13 +19,13 @@ public class Crime {
     @ManyToOne
     private Criminal criminal;
 
-    public Crime(String description, Date date, Gang gang) {
+    public Crime(String description, String date, Gang gang) {
         this.description = description;
         this.date = date;
         this.gang = gang;
     }
 
-    public Crime(long id, String description, Date date, Criminal criminal) {
+    public Crime(long id, String description, String date, Criminal criminal) {
         this.id = id;
         this.description = description;
         this.date = date;
@@ -53,14 +51,29 @@ public class Crime {
         this.description = description;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
+    public Gang getGang() {
+        return gang;
+    }
+
+    public void setGang(Gang gang) {
+        this.gang = gang;
+    }
+
+    public Criminal getCriminal() {
+        return criminal;
+    }
+
+    public void setCriminal(Criminal criminal) {
+        this.criminal = criminal;
+    }
 
     @Override
     public String toString() {

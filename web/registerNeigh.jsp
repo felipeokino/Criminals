@@ -11,11 +11,11 @@
   <h2 id="hSpecial">Novo Bairro</h2>
 
   <div class="dadoSpecial">
-    <form>
+    <form action="controller" method="post">
 
       <label class="labelBairro">
         Nome
-        <input type="text" name="nameCity">
+        <input type="text" name="nameNeigh">
       </label>
 
       <label class="labelBairro">
@@ -24,7 +24,7 @@
       </label>
 
       <div class="botoes">
-        <button type="submit" value="Enviar" class="btn">Cadastrar</button>
+        <button type="submit" value="RegisterNeigh" class="btn" name="command">Cadastrar</button>
         <a href="adminMain.jsp"><button class="btn">Voltar</button></a>
       </div>
 

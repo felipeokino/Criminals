@@ -64,6 +64,9 @@ public class Criminal {
         this.birth_date = birth_date;
     }
 
+    public String getName(){
+        return this.getFirst_name() + " " + this.getLast_name();
+    }
     @Override
     public String toString() {
         return "Criminal{" +
