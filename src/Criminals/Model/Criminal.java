@@ -5,14 +5,12 @@ import javax.persistence.*;
 @Entity
 public class Criminal {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
     private String cpf;
     private String first_name;
     private String last_name;
-
-    @Temporal(TemporalType.DATE)
     private String birth_date;
 
     public Criminal(long id, String cpf, String first_name, String last_name, String birth_date) {

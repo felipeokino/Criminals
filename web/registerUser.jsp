@@ -10,7 +10,7 @@
 
   <h2 id="hSpecial">Cadastro de Usuário</h2>
   <div class="dadoSpecial">
-    <form>
+    <form action="controller" method="post">
 
       <label class="labelUser">
         CPF
@@ -32,8 +32,12 @@
         <input class="inputDataUser" type="date" name="niver">
       </label>
 
+      <label class="labelUser">
+        Cargo
+        <input class="inputDataUser" type="text" name="office">
+      </label>
       <div>
-        <button type="submit" value="Enviar" class="btnCadastroUser">Cadastrar</button>
+        <button type="submit" value="RegisterUser" class="btnCadastroUser" name="command">Cadastrar</button>
         <button type="reset" value="limpar" class="btnCadastroUser">Limpar</button>
         <a href="adminMain.jsp"><button class="btnCadastroUser">Voltar</button></a>
       </div>

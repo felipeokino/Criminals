@@ -6,10 +6,10 @@ import java.util.List;
 @Entity
 public class Process {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @OneToMany
+    @ManyToOne
     private Criminal criminal;
 
     @ManyToMany
