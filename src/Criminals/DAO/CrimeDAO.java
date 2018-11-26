@@ -1,63 +1,31 @@
 package Criminals.DAO;
 
 import Criminals.Model.Crime;
-import Criminals.Util.ConnectionFactory;
 
-import java.sql.*;
-import java.util.ArrayList;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
 import java.util.List;
 
 public class CrimeDAO {
     public void inserir(Crime crime) {
-        Connection conn = null;
-        PreparedStatement ps = null;
-
-        if(crime == null)
-            throw new
-                    RuntimeException("O crime não pode" +
-                    " ser nulo!");
-        try {
-            conn = ConnectionFactory.getConnection();
-            String sql = "INSERT INTO Crime " +
-                    "(ID, DESCRIPTION, DATE) " +
-                    "VALUES (?, ?, ?)";
-            ps = conn.prepareStatement(sql);
-            ps.setInt(1, Math.toIntExact(crime.getId()));
-            ps.setString(2, crime.getDescription());
-            ps.setDate(3, (Date) crime.getDate());
-            ps.executeUpdate();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } finally {
-            ConnectionFactory.close(conn);
-        }
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("criminal");
+        EntityManager manager = factory.createEntityManager();
+        manager.getTransaction().begin();
+        manager.persist(crime);
+        manager.getTransaction().commit();
     }
 
     public List<Crime> getCrimes() {
-        Connection conn = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-
-        try {
-            conn = ConnectionFactory.getConnection();
-            String sql = "SELECT * FROM CRIMES";
-            ps = conn.prepareStatement(sql);
-            rs = ps.executeQuery();
-            List<Crime> crimes =
-                    new ArrayList<Crime>();
-            while(rs.next()) {
-                Crime crime = new Crime();
-                crime.setId(rs.getInt(1));
-                crime.setDescription(rs.getString(2));
-                crime.setDate(rs.getDate(3));
-                crimes.add(crime);
-            }
-            return crimes;
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } finally {
-            ConnectionFactory.close(conn);
-        }
+        EntityManagerFactory factory =
+                Persistence.createEntityManagerFactory("criminal");
+        EntityManager manager =
+                factory.createEntityManager();
+        Query query = manager.createQuery("select a from Crime a");
+        List<Crime> crimes = query.getResultList();
+        factory.close();
+        return crimes;
     }
 
 }
