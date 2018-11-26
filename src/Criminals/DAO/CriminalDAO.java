@@ -27,4 +27,5 @@ public class CriminalDAO {
         factory.close();
         return criminals;
     }
+
 }

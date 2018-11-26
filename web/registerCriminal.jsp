@@ -10,7 +10,7 @@
 
   <h2>Novo Criminoso</h2>
   <div class="dadoSpecial">
-    <form>
+    <form method="post" action="controller">
 
       <label class="labelCriminoso">
         CPF
@@ -29,16 +29,16 @@
 
       <label class="labelCriminoso">
         Nascimento
-        <input class="inputDataNasc" type="date" name="niver">
+        <input class="inputDataNasc" type="date" name="birth">
       </label>
 
         <div>
           <label>Pertence a gangue?</label>
-          <input type="checkbox" name="VISUAL">
+          <input type="checkbox" name="gang" value="true">
         </div>
 
       <div class="botoes">
-        <button type="submit" value="Enviar" class="btn">Enviar</button>
+        <button type="submit" value="RegisterCriminal" class="btn" name="command">Enviar</button>
         <button type="reset" value="limpar" class="btn">Limpar</button>
       </div>
     </form>

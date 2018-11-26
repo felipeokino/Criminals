@@ -1,6 +1,9 @@
 package Criminals.Controller;
 
 import Criminals.Command.Command;
+import Criminals.DAO.CrimeDAO;
+import Criminals.DAO.CriminalDAO;
+import Criminals.DAO.NeighborhoodDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,11 +16,20 @@ import java.io.IOException;
 public class Controller extends HttpServlet{
      private static final long serialVersionUID = 1L;
 
-        public void init() {
+    public void init() {
+        CriminalDAO dao = new CriminalDAO();
+        getServletContext().setAttribute("criminals",
+                dao.getCriminals());
 
-        }
+        CrimeDAO crimeDAO = new CrimeDAO();
+        getServletContext().setAttribute("crimes", crimeDAO.getCrimes());
 
-        protected void service(HttpServletRequest request,
+        NeighborhoodDAO neighborhoodDAO = new NeighborhoodDAO();
+        getServletContext().setAttribute("neighs", neighborhoodDAO.getNeighs());
+    }
+
+
+    protected void service(HttpServletRequest request,
                                HttpServletResponse response)
                 throws ServletException,
                 IOException {
