@@ -27,4 +27,15 @@ public class NeighborhoodDAO {
         return neighborhoods;
     }
 
+    public Neighborhood getNeighById(long id) {
+        EntityManagerFactory factory =
+                Persistence.createEntityManagerFactory("criminal");
+        EntityManager manager =
+                factory.createEntityManager();
+        Query query = manager.createQuery("select a from Neighborhood a where id=:id");
+        query.setParameter("id", id);
+        Neighborhood neighborhood = (Neighborhood) query.getSingleResult();
+        factory.close();
+        return neighborhood;
+    }
 }

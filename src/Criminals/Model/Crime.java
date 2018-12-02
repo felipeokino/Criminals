@@ -13,11 +13,16 @@ public class Crime {
 
     private String date;
 
+    private String local;
+
     @ManyToOne
     private Gang gang;
 
     @ManyToOne
     private Criminal criminal;
+
+    @ManyToOne
+    private Neighborhood neighborhood;
 
     public Crime(String description, String date, Gang gang) {
         this.description = description;
@@ -73,6 +78,14 @@ public class Crime {
 
     public void setCriminal(Criminal criminal) {
         this.criminal = criminal;
+    }
+
+    public Neighborhood getNeighborhood() {
+        return neighborhood;
+    }
+
+    public void setNeighborhood(Neighborhood neighborhood) {
+        this.neighborhood = neighborhood;
     }
 
     @Override

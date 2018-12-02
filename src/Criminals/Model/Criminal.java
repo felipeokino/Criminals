@@ -9,8 +9,8 @@ public class Criminal {
     private long id;
 
     private String cpf;
-    private String first_name;
-    private String last_name;
+    public String first_name;
+    public String last_name;
     private String birth_date;
 
     public Criminal(long id, String cpf, String first_name, String last_name, String birth_date) {
@@ -24,7 +24,7 @@ public class Criminal {
     public Criminal() {
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -65,7 +65,7 @@ public class Criminal {
     }
 
     public String getName(){
-        return this.getFirst_name() + " " + this.getLast_name();
+        return first_name + " " + last_name;
     }
     @Override
     public String toString() {

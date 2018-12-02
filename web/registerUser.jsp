@@ -36,6 +36,21 @@
         Cargo
         <input class="inputDataUser" type="text" name="office">
       </label>
+
+      <label class="labelUser">
+        Nível de acesso
+        <input class="inputDataUser" type="text" name="level">
+      </label>
+
+      <label class="labelUser">
+        Login
+        <input class="inputDataUser" type="text" name="login">
+      </label>
+
+      <label class="labelUser">
+        Senha
+        <input class="inputDataUser" type="password" name="passwd">
+      </label>
       <div>
         <button type="submit" value="RegisterUser" class="btnCadastroUser" name="command">Cadastrar</button>
         <button type="reset" value="limpar" class="btnCadastroUser">Limpar</button>

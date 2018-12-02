@@ -14,17 +14,22 @@ public class RegisterUser implements Command {
         String last_name = request.getParameter("last_name");
         String niver = request.getParameter("niver");
         String office = request.getParameter("office");
+        String level = request.getParameter("level");
+        String login = request.getParameter("login");
+        String password = request.getParameter("passwd");
 
         User user = new User();
         user.setCpf(cpf);
         user.setName(first_name + " " + last_name);
         user.setBirth(niver);
         user.setOffice(office);
-        user.setLogin("teste");
-        user.setPassword("123456");
+        user.setLevel(level);
+        user.setLogin(login);
+        user.setPassword(password);
+
         UserDAO userDAO = new UserDAO();
         userDAO.inserir(user);
-//        request.getServletContext().setAttribute("user", userDAO.getUser());
+        request.getServletContext().setAttribute("user", user);
         return "adminMain.jsp";
     }
 }
