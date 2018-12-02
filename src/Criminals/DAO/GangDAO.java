@@ -28,4 +28,15 @@ public class GangDAO {
         return gangs;
     }
 
+    public Gang getGangById(Long id) {
+        EntityManagerFactory factory =
+                Persistence.createEntityManagerFactory("criminal");
+        EntityManager manager =
+                factory.createEntityManager();
+        Query query = manager.createQuery("select a from Gang a where id=:id");
+        query.setParameter("id", id);
+        Gang gang = (Gang) query.getSingleResult();
+        factory.close();
+        return gang;
+    }
 }

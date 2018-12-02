@@ -15,34 +15,48 @@
 
       <label class="labelCadastro">
         Tipo Crime
-        <select>
+        <select name="type">
             <option></option>
-            <option name="roubo_carro">Roubo ou Furto de Veículos</option>
-            <option name="roubo_docs">Roubo ou Furto de documentos/objetos</option>
-            <option name="injuria">Injúria, calúnia ou difamação</option>
-            <option name="acidente">Acidente de trânsito com vítimas</option>
-            <option name="sequestro">Sequestro</option>
+            <option value="roubo_carro">Roubo ou Furto de Veículos</option>
+            <option value="roubo_docs">Roubo ou Furto de documentos/objetos</option>
+            <option value="injuria">Injúria, calúnia ou difamação</option>
+            <option value="acidente">Acidente de trânsito com vítimas</option>
+            <option value="sequestro">Sequestro</option>
         </select>
       </label>
 
       <label class="labelCadastro">
         Criminoso
-        <select>
-            <option></option>
-            <option name="kim">Kim</option>
-            <option name="valmir">Valmir</option>
-            <option name="bia">Bia</option>
-            <option name="edipo">Edipo</option>
+        <select name="criminal">
+            <optgroup label="Criminosos">
+                <c:forEach var="criminal" items="${criminals}">
+                    <option name="criminal" value="${criminal.getId()}">${criminal.getName()}</option>
+                </c:forEach>
+            </optgroup>
+            <optgroup label="Quadrilhas">
+                <c:forEach var="gang" items="${gangs}">
+                    <option name="gang" value="${gang.id}">${gang.name}</option>
+                </c:forEach>
+            </optgroup>
         </select>
       </label>
+        <label class="labelCadastro">
+            Quadrilha
+            <select name="gang">
+                <optgroup label="Quadrilhas">
+                    <c:forEach var="gang" items="${gangs}">
+                        <option name="gang" value="${gang.getId()}">${gang.name}</option>
+                    </c:forEach>
+                </optgroup>
+            </select>
+        </label>
 
       <label class="labelCadastro">
         Bairro
-        <select>
-            <option></option>
-            <option name="saoJose">Vila São Jose</option>
-            <option name="aracy">Aracy</option>
-            <option name="faga">Faga</option>
+        <select name="neigh">
+            <c:forEach var="neigh" items="${neighs}">
+                <option name="neigh" value="${neigh.getId()}">${neigh.name}</option>
+            </c:forEach>
         </select>
       </label>
 

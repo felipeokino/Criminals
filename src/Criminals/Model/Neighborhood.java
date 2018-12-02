@@ -8,7 +8,7 @@ public class Neighborhood {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
-    private String name;
+    public String name;
     private String city;
 
     @ManyToMany

@@ -21,7 +21,6 @@
         Nome
       <input type="text" name="first_name">
       </label>
-
       <label class="labelCriminoso">
         Sobrenome
         <input type="text" name="last_name">

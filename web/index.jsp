@@ -7,22 +7,22 @@
 </head>
 <body>
 
-<div class="central">
+<form class="central" action="controller" method="post">
   <h1>Login de Usuário</h1>
   <div class="dados">
     <label>Usuário</label>
-    <input type="text">
+    <input type="text" name="login">
 
     <label>Senha</label>
-    <input type="password">
+    <input type="password" name="password">
   </div>
 
   <div class="botoes">
-    <a href=""><button class="btn">Entrar</button></a>
+    <button type="submit" class="btn" name="command" value="Login">Entrar</button>
     <a href="index.jsp"><button class="btn">Cancelar</button></a>
   </div>
 
-</div>
+</form>
 </body>
 </html>
 

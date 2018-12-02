@@ -28,4 +28,17 @@ public class CriminalDAO {
         return criminals;
     }
 
+    public Criminal getCriminalById(Long id) {
+        EntityManagerFactory factory =
+                Persistence.createEntityManagerFactory("criminal");
+        EntityManager manager =
+                factory.createEntityManager();
+        Query query = manager.createQuery("select a from Criminal a where a.id=:id");
+        query.setParameter("id", id);
+        Criminal criminal = (Criminal) query.getSingleResult();
+        factory.close();
+        System.out.println(criminal.getName());
+
+        return criminal;
+    }
 }

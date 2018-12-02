@@ -3,6 +3,7 @@ package Criminals.Controller;
 import Criminals.Command.Command;
 import Criminals.DAO.CrimeDAO;
 import Criminals.DAO.CriminalDAO;
+import Criminals.DAO.GangDAO;
 import Criminals.DAO.NeighborhoodDAO;
 
 import javax.servlet.ServletException;
@@ -23,6 +24,9 @@ public class Controller extends HttpServlet{
 
         CrimeDAO crimeDAO = new CrimeDAO();
         getServletContext().setAttribute("crimes", crimeDAO.getCrimes());
+
+        GangDAO gangDAO = new GangDAO();
+        getServletContext().setAttribute("gangs", gangDAO.getGangs());
 
         NeighborhoodDAO neighborhoodDAO = new NeighborhoodDAO();
         getServletContext().setAttribute("neighs", neighborhoodDAO.getNeighs());

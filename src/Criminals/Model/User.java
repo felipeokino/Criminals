@@ -21,6 +21,8 @@ public class User {
 
     private String password;
 
+    private String level;
+
 
     public User(String name, String cpf, String birth, String office) {
         this.name = name;
@@ -32,6 +34,14 @@ public class User {
     }
 
     public User() {
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
     }
 
     public long getId() {
